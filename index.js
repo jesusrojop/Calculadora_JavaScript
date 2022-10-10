@@ -25,6 +25,7 @@ window.addEventListener('load', ()=> {
 		console.log("soy igual")
 	})
 
+	// saisaijsajadsajs
 
 	
 	//* obtenccion de numeros
