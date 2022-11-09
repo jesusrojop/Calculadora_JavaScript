@@ -2,13 +2,6 @@
 
 window.addEventListener('load', ()=> {
 
-
-	// ! obtener teclas presionadas
-	// window.addEventListener('keydown', (key) => {
-	// 	console.log(key.key);
-	// } )
-
-
 	//* Obtencion de comandos
 	const borrarTodo = document.querySelector("#borrarTodo")
 	const borrarUno = document.querySelector("#borrarUno")
@@ -23,10 +16,9 @@ window.addEventListener('load', ()=> {
 	})
 
 	// BORRAR UNO
-	borrarUno.addEventListener('click', ()=> {
+	borrarUno.addEventListener('click', () => {
 		console.log("soy borrar uno");
-		console.log(document.querySelector
-			('.valor-inferior').value)
+		document.querySelector('.borrar-uno').value
 	})
 
 	// IGUAL
