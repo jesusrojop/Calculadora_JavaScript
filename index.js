@@ -6,25 +6,23 @@ window.addEventListener('load', ()=> {
 	const borrarTodo = document.querySelector("#borrarTodo")
 	const borrarUno = document.querySelector("#borrarUno")
 	const operadorIgual = document.querySelector("#operadorIgual")
+	const pantallaResultado = document.querySelector('.valor-inferior')
 
-	//* Funcion de cada comando
+	//! Funcionalidad de cada comando
 
 	// BORRAR TODO
 	borrarTodo.addEventListener('click', () => {
-		console.log("soy c");
-		document.querySelector('.valor-inferior').value = ''
+		pantallaResultado.value = ''
 	})
 
 	// BORRAR UNO
 	borrarUno.addEventListener('click', () => {
-		console.log("soy borrar uno");
-		document.querySelector('.borrar-uno').value
+		pantallaResultado.value
 	})
 
 	// IGUAL
 	operadorIgual.addEventListener('click', () => {
-		console.log("soy igual")
-		document.querySelector('.valor-inferior').value = ''
+		pantallaResultado.value = eval(pantallaResultado.value)
 	})
 
 	//* Obtencion de numeros
@@ -42,74 +40,65 @@ window.addEventListener('load', ()=> {
 	const caracterDecimal = document.querySelector("#punto")
 
 
-	//* Funcionalidad de cada numero
+	//! Funcionalidad de cada numero
 
 	// NUMERO CERO
 	numeroCero.addEventListener('click', () => {
-		console.log("soy cero")
-		document.querySelector('.valor-inferior').value += '0'
+		pantallaResultado.value += '0'
 	})
 
 	// NUMERO UNO
 	numeroUno.addEventListener('click', () => {
-		console.log("soy uno");
-		document.querySelector('.valor-inferior').value += '1'
+		pantallaResultado.value += '1'
 	})
 
 	// NUMERO DOS
 	numeroDos.addEventListener('click', () => {
-		console.log("soy dos");
-		document.querySelector('.valor-inferior').value += '2'
+		pantallaResultado.value += '2'
 	})
 
 	// NUMERO TRES
 	numeroTres.addEventListener('click', () => {
-		console.log("soy tres")
-		document.querySelector('.valor-inferior').value += '3'
+		pantallaResultado.value += '3'
 	})
 
 	// NUMERO CUATRO
 	numeroCuatro.addEventListener('click', () => {
-		console.log("soy cuatro")
-		document.querySelector('.valor-inferior').value += '4'
+		pantallaResultado.value += '4'
 	})
 
 	// NUMERO CINCO
 	numeroCinco.addEventListener('click', () => {
-		console.log("soy cinco")
-		document.querySelector('.valor-inferior').value += '5'
+		pantallaResultado.value += '5'
 	})
 
 	// NUMERO SEIS
 	numeroSeis.addEventListener('click', () => {
-		console.log("soy seis")
-		document.querySelector('.valor-inferior').value += '6'
+		pantallaResultado.value += '6'
 	})
 
 	// NUMERO SIETE
 	numeroSiete.addEventListener('click', () => {
-		console.log("soy siete")
-		document.querySelector('.valor-inferior').value += '7'
+		pantallaResultado.value += '7'
 	})
 
 	// NUMERO OCHO	
 	numeroOcho.addEventListener('click', () => {
-		console.log("soy ocho")
-		document.querySelector('.valor-inferior').value += '8'
+		pantallaResultado.value += '8'
 	})
 
 	// NUMERO NUEVE
 	numeroNueve.addEventListener('click', () => {
-		console.log("soy nueve")
-		document.querySelector('.valor-inferior').value += '9'
+		pantallaResultado.value += '9'
 	})
 
 	// CARACTER DECIMAL
 	caracterDecimal.addEventListener('click', () => {
-		console.log("soy punto")
-		document.querySelector('.valor-inferior').value += '.'
+		let lastChar = pantallaResultado.value[pantallaResultado.value.length - 1]
+		if (lastChar != ' ' && lastChar != '' && lastChar != undefined) {
+			pantallaResultado.value += '.'
+		}
 	})
-
 
 	//* Obtencion de operadores
 
@@ -119,32 +108,26 @@ window.addEventListener('load', ()=> {
 	const operadorResta = document.querySelector("#restar")
 
 
-	//* Funcionalidad de cada operador
+	//! Funcionalidad de cada operador
 
 	// DIVISION
 	operadorDivision.addEventListener('click', () => {
-		console.log("soy division")
-		document.querySelector('.valor-inferior').value += ' / '
+		pantallaResultado.value += '/'
 	})
 
 	// MULTIPLICACION
 	operadorMultiplicar.addEventListener('click', () => {
-		console.log("soy multiplicacion")
-		document.querySelector('.valor-inferior').value += ' X '
+		pantallaResultado.value += '*'
 	})
 
 	// SUMA
 	operadorSuma.addEventListener('click', () => {
-		console.log("soy suma")
-		document.querySelector('.valor-inferior').value += ' + '
+		pantallaResultado.value += '+'
 	})
 
 	// RESTA
 	operadorResta.addEventListener('click', () => {
-		console.log("soy resta")
-		document.querySelector('.valor-inferior').value += ' - '
+		pantallaResultado.value += '-'
 	})
-
-
 })
 
